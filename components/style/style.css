@@ -1,0 +1,11 @@
+#categorie li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  text-decoration: underline !important;
+}
+
+#categorie li:hover {
+  text-decoration: underline !important;;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}

@@ -8,7 +8,7 @@ function returnCnx()
     $host = 'localhost';
     $dbname = 'blog';
     $user = 'root';
-    $password = '';
+    $password = 'root';
     try {
         $connexion = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

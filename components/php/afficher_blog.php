@@ -26,6 +26,20 @@ $comentsPost = $coments->fetchAll(PDO::FETCH_ASSOC);
 // print_r($comentsPost);
 // echo "</pre>";
 
+// if (empty($comentsPost)) {
+//     $comentsPost = ['rien' =>'Il semble qu’il n’y ait rien à voir ici pour le moment'];
+// }
+
+
 $smarty->assign('lastPost', $lastPost);
 $smarty->assign('comentsPost', $comentsPost);
-$smarty->display('afficher_blog.tpl');
+$smarty->display('afficher_blog.html');
+
+
+// echo "<pre>";
+// print_r($comentsPost);
+// echo "</pre>";
+
+
+
+

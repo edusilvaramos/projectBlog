@@ -14,6 +14,7 @@ try {
     $query = 'INSERT INTO billets_blog (titre, contenu, categorie,date_billet)
               VALUES (:titre, :contenu, :categorie, :date_billet)';
     $stmt = $db->prepare($query);
+    date_default_timezone_set('Europe/Paris');
     $stmt->execute([
         ':titre' => $titre,
         ':contenu' => $contenu,
@@ -25,3 +26,4 @@ try {
 }
 
 header("Location: afficher_blog.php");
+

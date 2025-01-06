@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-04 19:56:10
+/* Smarty version 5.4.3, created on 2025-01-05 17:05:45
   from 'file:index_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_6779844a609d27_89404364',
+  'unifunc' => 'content_677abbe9a572e6_47942597',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5dbb4488ff2621ed04c65be9ca9e733e6bc7d34a' => 
+    '653e7e03fc89a09389ca677164c2778c8e4c5e3e' => 
     array (
       0 => 'index_blog.tpl',
-      1 => 1736016831,
+      1 => 1736096599,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6779844a609d27_89404364 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+function content_677abbe9a572e6_47942597 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
 ?><!DOCTYPE html>
 <html>
   <head>

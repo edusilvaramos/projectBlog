@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-04 19:56:12
-  from 'file:afficher_blog.tpl' */
+/* Smarty version 5.4.3, created on 2025-01-06 08:10:40
+  from 'file:afficher_blog.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_6779844c4ceaf4_21801913',
+  'unifunc' => 'content_677b9000f32d27_03543403',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '376491e93bf7149c289f5df36897edecbf7b7b23' => 
+    '9142094b5410a6f5616b9ee30b176886e5245f24' => 
     array (
-      0 => 'afficher_blog.tpl',
-      1 => 1736016860,
+      0 => 'afficher_blog.html',
+      1 => 1736150892,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6779844c4ceaf4_21801913 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+function content_677b9000f32d27_03543403 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
 ?><html>
   <head>
     <title>Blog</title>
@@ -51,7 +51,6 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 </p>
         </div>
       </div>
-      <!-- Section des commentaires -->
       <div class="card mx-auto mt-4" style="max-width: 600px">
         <div class="card-body">
           <h2>Commentaires</h2>
@@ -80,7 +79,6 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
 ?>
           </ul>
           <hr />
-          <!-- Lien pour afficher le formulaire -->
           <p>
             <a
               href="javascript:void(0);"
@@ -92,7 +90,6 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
         </div>
       </div>
 
-      <!-- Formulaire caché -->
       <div
         id="formComent"
         class="card mx-auto p-4 mt-4 shadow bg-light"
@@ -144,10 +141,10 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
       }
 
       document.querySelectorAll(".date-billet").forEach((element) => {
-        const originalDate = element.textContent.trim(); // Obtém o conteúdo do elemento
+        const originalDate = element.textContent.trim();
         if (originalDate) {
           const formattedDate = formatDate(originalDate);
-          element.textContent = formattedDate; // Atualiza o conteúdo do elemento
+          element.textContent = formattedDate;
         }
       });
     <?php echo '</script'; ?>

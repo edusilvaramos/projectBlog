@@ -1,26 +1,27 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-06 08:10:40
+/* Smarty version 5.4.3, created on 2025-01-16 15:09:34
   from 'file:afficher_blog.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_677b9000f32d27_03543403',
+  'unifunc' => 'content_6789212ec45f88_88233906',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9142094b5410a6f5616b9ee30b176886e5245f24' => 
     array (
       0 => 'afficher_blog.html',
-      1 => 1736150892,
+      1 => 1737040172,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_677b9000f32d27_03543403 (\Smarty\Template $_smarty_tpl) {
+function content_6789212ec45f88_88233906 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
 ?><html>
   <head>
@@ -34,9 +35,8 @@ $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/tem
 >
   </head>
   <body>
-    <a href="index_blog.php">
-      <h1 class="title m-3"><strong>MON Blog</strong></h1>
-    </a>
+<?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
     <div class="container mt-5">
       <div class="card mx-auto" style="max-width: 600px">
         <div class="card-body">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-16 23:50:53
+/* Smarty version 5.4.3, created on 2025-01-17 16:33:25
   from 'file:base_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67898d4d068af5_32367267',
+  'unifunc' => 'content_678a78453b7232_72654469',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89e8447d6fbea90d616b5b57a96762c8bf48d906' => 
     array (
       0 => 'base_blog.tpl',
-      1 => 1737067816,
+      1 => 1737128003,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67898d4d068af5_32367267 (\Smarty\Template $_smarty_tpl) {
+function content_678a78453b7232_72654469 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
-?><nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light">
+?><nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light" style="font-family: 'Playfair Display', serif; font-size: 1.5rem;" >
   <div class="container-fluid">
     <a class="navbar-brand" href="index_blog.php">
       <img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png" class="img" style=" height: 6rem;
@@ -42,13 +42,6 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
         <li class="nav-item">
           <a class="nav-link" href="show.php">Nouveau Billet</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Galerie des photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">À propos de moi</a>
-        </li>
-
       </ul>
       <form class="d-flex" action="index_blog.php" method="get">
         <input class="form-control me-sm-2" type="search" placeholder="Chercher pur titre" name="title">

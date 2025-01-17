@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <title>{$titre}</title>
@@ -17,11 +16,11 @@
   </style>
 </head>
 
-<body>
+<body style="font-family: 'Playfair Display', serif;" >
 {include file="base_blog.tpl"}
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
-      <h1 class="text-center">Nouveau Billet</h1>
+      <h1 class="text-center" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 3rem; margin-top: 3rem;">Nouveau Billet</h1>
       <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto" enctype="multipart/form-data"  >
         <div class="mb-3">
           <label for="titre" class="form-label">Titre :</label>
@@ -71,6 +70,8 @@
       </form>
     </div>
   </div>
+
+  
 </body>
 
 </html>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-17 10:36:16
+/* Smarty version 5.4.3, created on 2025-01-17 16:34:50
   from 'file:edition_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678a2490d58ef5_10681707',
+  'unifunc' => 'content_678a789ac9cd97_06343222',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69cb8c1b03561472b87ccb46688ac6664f0182e4' => 
     array (
       0 => 'edition_blog.tpl',
-      1 => 1737106433,
+      1 => 1737128089,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678a2490d58ef5_10681707 (\Smarty\Template $_smarty_tpl) {
+function content_678a789ac9cd97_06343222 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
-?>
-<html>
+?><html>
 <head>
   <title><?php echo $_smarty_tpl->getValue('titre');?>
 </title>
@@ -43,12 +42,12 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
   </style>
 </head>
 
-<body>
+<body style="font-family: 'Playfair Display', serif;" >
 <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
-      <h1 class="text-center">Nouveau Billet</h1>
+      <h1 class="text-center" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 3rem; margin-top: 3rem;">Nouveau Billet</h1>
       <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto" enctype="multipart/form-data"  >
         <div class="mb-3">
           <label for="titre" class="form-label">Titre :</label>
@@ -98,6 +97,8 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
       </form>
     </div>
   </div>
+
+  
 </body>
 
 </html><?php }

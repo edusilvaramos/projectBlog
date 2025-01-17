@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light">
+<nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light" style="font-family: 'Playfair Display', serif; font-size: 1.5rem;" >
   <div class="container-fluid">
     <a class="navbar-brand" href="index_blog.php">
       <img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png" class="img" style=" height: 6rem;
@@ -18,13 +18,6 @@
         <li class="nav-item">
           <a class="nav-link" href="show.php">Nouveau Billet</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Galerie des photos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">À propos de moi</a>
-        </li>
-
       </ul>
       <form class="d-flex" action="index_blog.php" method="get">
         <input class="form-control me-sm-2" type="search" placeholder="Chercher pur titre" name="title">

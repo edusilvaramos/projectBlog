@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-16 22:44:55
+/* Smarty version 5.4.3, created on 2025-01-17 16:31:17
   from 'file:index_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67897dd7074ca7_20740640',
+  'unifunc' => 'content_678a77c54a5a16_36983702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5dbb4488ff2621ed04c65be9ca9e733e6bc7d34a' => 
     array (
       0 => 'index_blog.tpl',
-      1 => 1737063893,
+      1 => 1737127874,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_67897dd7074ca7_20740640 (\Smarty\Template $_smarty_tpl) {
+function content_678a77c54a5a16_36983702 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
 ?><head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -31,7 +31,7 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
 	<div class="row">
-		<div class="col-4 w-25 p-5">
+		<div class="col-4 w-25 p-5" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold;  text-transform: uppercase;">
 			<label for="categorie" class="form-label">
 				Sélectionnez une catégorie
 			</label>
@@ -54,7 +54,7 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
 			</ul>
 			<a href="?categorie=all">Toutes les categories</a>
 		</div>
-		<div class="col mt-5">
+		<div class="col mt-5" style="font-family: 'Playfair Display', serif; ">
 			<div class="container mt-5">
 				<?php
 $__section_cardBllet_0_loop = (is_array(@$_loop=$_smarty_tpl->getValue('postAll')) ? count($_loop) : max(0, (int) $_loop));

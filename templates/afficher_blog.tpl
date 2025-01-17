@@ -1,6 +1,6 @@
 <head>
   <title>Task</title>
-  
+
   <script type="text/javascript">
     function afficherFormulaire() {
       document.getElementById("formComent").style.display = "block";
@@ -9,10 +9,29 @@
 </head>
 
 <body>
+
+
   {include file="base_blog.tpl"}<html>
-  <div class="container mt-5">
-    <div class="card mx-auto" style="max-width: 600px">
-      <div class="card-body">
+  <h1 class="mb-2" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
+  {$lastPost.titre}
+</h1>
+  <div class="image-container">
+
+    <img src="{$imageUrl}" alt="Descrição da Imagem" style=" position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111; z-index: -1;
+  filter: brightness(0.3);">
+
+<div class="image-container">
+
+
+  </div>
+  <div class=" container" style="margin-top: 10rem;">
+    <div class="card mx-auto" style="max-width: 50rem;">
+      <div class="card-body text-white bg-dark">
 
         <div class="d-flex justify-content-between align-items-center ">
           <h1 class="mb-2">{$lastPost.titre}</h1>
@@ -25,14 +44,15 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content bg-secondary">
                 <div class="modal-header">
-                  <h5 class="modal-title text-white" id="exampleModalLabel">Vous voulez vraiment supprimer ce billet ? les commentaires seront également supprimés
+                  <h5 class="modal-title text-white" id="exampleModalLabel">Vous voulez vraiment supprimer ce billet ?
+                    les commentaires seront également supprimés
                   </h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary"
-                  onclick="window.location.href='delete_blog.php?id={$lastPost.ID}';">oui</button>
+                    onclick="window.location.href='delete_blog.php?id={$lastPost.ID}';">oui</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
                 </div>
               </div>
@@ -46,8 +66,8 @@
         <p class="lead">{$lastPost.contenu}</p>
       </div>
     </div>
-    <div class="card mx-auto mt-4" style="max-width: 600px">
-      <div class="card-body">
+    <div class="card mx-auto mt-4"  style="font-family: 'Playfair Display', serif; max-width: 50rem">
+      <div class="card-body text-white bg-dark"  style="font-family: 'Playfair Display', serif;" >
         <h2>Commentaires</h2>
         <hr />
 
@@ -67,7 +87,7 @@
       </div>
     </div>
 
-    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px">
+    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
       <form method="POST" action="../php/commenter_blog.php">
         <input type="hidden" name="ID" value="{$lastPost.ID}" />
         <div class="mb-3">
@@ -106,13 +126,4 @@
       }
     });
   </script>
-  <div >
-  {if $imagesPost|@count > 0}
-    {foreach $imagesPost as $image}
-        <img src="../image/{$image.image_path}" alt="Descrição da Imagem" >
-    {/foreach}
-  {/if}
-</div>
-
 </body>
-</html>

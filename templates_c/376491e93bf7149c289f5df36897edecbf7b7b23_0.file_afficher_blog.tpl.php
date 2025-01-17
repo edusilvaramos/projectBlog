@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-17 12:36:16
+/* Smarty version 5.4.3, created on 2025-01-17 16:38:34
   from 'file:afficher_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678a40b0b83ab5_11985597',
+  'unifunc' => 'content_678a797a58fe81_91922593',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '376491e93bf7149c289f5df36897edecbf7b7b23' => 
     array (
       0 => 'afficher_blog.tpl',
-      1 => 1737113775,
+      1 => 1737128312,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,11 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678a40b0b83ab5_11985597 (\Smarty\Template $_smarty_tpl) {
+function content_678a797a58fe81_91922593 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
 ?><head>
   <title>Task</title>
-  
+
   <?php echo '<script'; ?>
  type="text/javascript">
     function afficherFormulaire() {
@@ -36,11 +36,32 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 </head>
 
 <body>
+
+
   <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?><html>
-  <div class="container mt-5">
-    <div class="card mx-auto" style="max-width: 600px">
-      <div class="card-body">
+  <h1 class="mb-2" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
+  <?php echo $_smarty_tpl->getValue('lastPost')['titre'];?>
+
+</h1>
+  <div class="image-container">
+
+    <img src="<?php echo $_smarty_tpl->getValue('imageUrl');?>
+" alt="Descrição da Imagem" style=" position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111111; z-index: -1;
+  filter: brightness(0.3);">
+
+<div class="image-container">
+
+
+  </div>
+  <div class=" container" style="margin-top: 10rem;">
+    <div class="card mx-auto" style="max-width: 50rem;">
+      <div class="card-body text-white bg-dark">
 
         <div class="d-flex justify-content-between align-items-center ">
           <h1 class="mb-2"><?php echo $_smarty_tpl->getValue('lastPost')['titre'];?>
@@ -54,14 +75,15 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
             <div class="modal-dialog" role="document">
               <div class="modal-content bg-secondary">
                 <div class="modal-header">
-                  <h5 class="modal-title text-white" id="exampleModalLabel">Vous voulez vraiment supprimer ce billet ? les commentaires seront également supprimés
+                  <h5 class="modal-title text-white" id="exampleModalLabel">Vous voulez vraiment supprimer ce billet ?
+                    les commentaires seront également supprimés
                   </h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary"
-                  onclick="window.location.href='delete_blog.php?id=<?php echo $_smarty_tpl->getValue('lastPost')['ID'];?>
+                    onclick="window.location.href='delete_blog.php?id=<?php echo $_smarty_tpl->getValue('lastPost')['ID'];?>
 ';">oui</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
                 </div>
@@ -79,8 +101,8 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 </p>
       </div>
     </div>
-    <div class="card mx-auto mt-4" style="max-width: 600px">
-      <div class="card-body">
+    <div class="card mx-auto mt-4"  style="font-family: 'Playfair Display', serif; max-width: 50rem">
+      <div class="card-body text-white bg-dark"  style="font-family: 'Playfair Display', serif;" >
         <h2>Commentaires</h2>
         <hr />
 
@@ -112,7 +134,7 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
       </div>
     </div>
 
-    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px">
+    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
       <form method="POST" action="../php/commenter_blog.php">
         <input type="hidden" name="ID" value="<?php echo $_smarty_tpl->getValue('lastPost')['ID'];?>
 " />
@@ -154,27 +176,5 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
     });
   <?php echo '</script'; ?>
 >
-  <div >
-  <?php if ($_smarty_tpl->getSmarty()->getModifierCallback('count')($_smarty_tpl->getValue('imagesPost')) > 0) {?>
-    <?php
-$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('imagesPost'), 'image');
-$foreach0DoElse = true;
-foreach ($_from ?? [] as $_smarty_tpl->getVariable('image')->value) {
-$foreach0DoElse = false;
-?>
-        <img src="../image/<?php echo $_smarty_tpl->getValue('image')['image_path'];?>
-" alt="Descrição da Imagem" syle=" 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #111111;" >
-    <?php
-}
-$_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
-  <?php }?>
-</div>
-
-</body>
-</html><?php }
+</body><?php }
 }

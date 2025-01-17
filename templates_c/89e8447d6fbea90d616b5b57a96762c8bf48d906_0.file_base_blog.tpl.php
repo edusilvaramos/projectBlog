@@ -1,4 +1,28 @@
-<nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light">
+<?php
+/* Smarty version 5.4.3, created on 2025-01-16 23:50:53
+  from 'file:base_blog.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.4.3',
+  'unifunc' => 'content_67898d4d068af5_32367267',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '89e8447d6fbea90d616b5b57a96762c8bf48d906' => 
+    array (
+      0 => 'base_blog.tpl',
+      1 => 1737067816,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_67898d4d068af5_32367267 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+?><nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light">
   <div class="container-fluid">
     <a class="navbar-brand" href="index_blog.php">
       <img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png" class="img" style=" height: 6rem;
@@ -33,7 +57,10 @@
     </div>
   </div>
 </nav>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"><?php echo '</script'; ?>
+>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><?php }
+}

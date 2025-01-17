@@ -30,16 +30,21 @@ $comentsPost = $coments->fetchAll(PDO::FETCH_ASSOC);
 //     $comentsPost = ['rien' =>'Il semble qu’il n’y ait rien à voir ici pour le moment'];
 // }
 
+$images = $db->prepare('SELECT * FROM images_blog WHERE billet_id = ?');
+$images->execute([$postID]);
+$imagesPost = $images->fetchAll(PDO::FETCH_ASSOC);
+
+// echo "<pre>";
+// print_r($imagesPost);
+// echo "</pre>";
+
 
 $smarty->assign('lastPost', $lastPost);
 $smarty->assign('comentsPost', $comentsPost);
-$smarty->display('afficher_blog.html');
+$smarty->assign('imagesPost', $imagesPost);
+$smarty->display('afficher_blog.tpl');
 
 
 // echo "<pre>";
 // print_r($comentsPost);
 // echo "</pre>";
-
-
-
-

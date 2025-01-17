@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-16 15:09:08
+/* Smarty version 5.4.3, created on 2025-01-17 10:36:16
   from 'file:edition_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678921142d20e6_23592631',
+  'unifunc' => 'content_678a2490d58ef5_10681707',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ef85ec17efa6a08456af687419ea5f663f045eb8' => 
+    '69cb8c1b03561472b87ccb46688ac6664f0182e4' => 
     array (
       0 => 'edition_blog.tpl',
-      1 => 1737040145,
+      1 => 1737106433,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,10 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678921142d20e6_23592631 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
-?><html>
-<?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+function content_678a2490d58ef5_10681707 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
 ?>
+<html>
 <head>
   <title><?php echo $_smarty_tpl->getValue('titre');?>
 </title>
@@ -45,10 +44,12 @@ $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/tem
 </head>
 
 <body>
+<?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
       <h1 class="text-center">Nouveau Billet</h1>
-      <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto">
+      <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto" enctype="multipart/form-data"  >
         <div class="mb-3">
           <label for="titre" class="form-label">Titre :</label>
           <input id="titre" name="titre" type="text" class="form-control" placeholder="Entrez le titre" required />
@@ -85,9 +86,13 @@ $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/tem
             <option value="reflexions">💬 Réflexions et Pensées</option>
           </select>
         </div>
+        <div class="mt-1 mb-3">
+        <label for="formFile" class="form-label mt-1 mb-1">Default file input example</label>
+        <input class="form-control" type="file" id="formFile" name="image">
+      </div>
         <div class="text-center">
-          <button name="submit" type="submit" class="btn btn-primary">
-            Poster
+          <button name="submit" type="submit" class="btn btn-primary w-50">
+            Publier
           </button>
         </div>
       </form>

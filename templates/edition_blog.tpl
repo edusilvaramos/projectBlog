@@ -1,5 +1,5 @@
+
 <html>
-{include file="base_blog.tpl"}
 <head>
   <title>{$titre}</title>
   <style>
@@ -18,10 +18,11 @@
 </head>
 
 <body>
+{include file="base_blog.tpl"}
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
       <h1 class="text-center">Nouveau Billet</h1>
-      <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto">
+      <form method="post" action="editer_blog.php" class="shadow p-4 rounded bg-light w-75 mx-auto" enctype="multipart/form-data"  >
         <div class="mb-3">
           <label for="titre" class="form-label">Titre :</label>
           <input id="titre" name="titre" type="text" class="form-control" placeholder="Entrez le titre" required />
@@ -58,9 +59,13 @@
             <option value="reflexions">💬 Réflexions et Pensées</option>
           </select>
         </div>
+        <div class="mt-1 mb-3">
+        <label for="formFile" class="form-label mt-1 mb-1">Default file input example</label>
+        <input class="form-control" type="file" id="formFile" name="image">
+      </div>
         <div class="text-center">
-          <button name="submit" type="submit" class="btn btn-primary">
-            Poster
+          <button name="submit" type="submit" class="btn btn-primary w-50">
+            Publier
           </button>
         </div>
       </form>

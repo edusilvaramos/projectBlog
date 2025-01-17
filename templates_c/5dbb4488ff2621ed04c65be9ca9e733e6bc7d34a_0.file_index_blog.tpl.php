@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-16 15:02:39
+/* Smarty version 5.4.3, created on 2025-01-16 22:44:55
   from 'file:index_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67891f8f7d7a82_36672942',
+  'unifunc' => 'content_67897dd7074ca7_20740640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '653e7e03fc89a09389ca677164c2778c8e4c5e3e' => 
+    '5dbb4488ff2621ed04c65be9ca9e733e6bc7d34a' => 
     array (
       0 => 'index_blog.tpl',
-      1 => 1737039673,
+      1 => 1737063893,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,15 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_67891f8f7d7a82_36672942 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
-?><!DOCTYPE html>
-<html>
-
-<head>
+function content_67897dd7074ca7_20740640 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+?><head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 	<title>MON Blog</title>
 </head>
+<body class="w-100">
 <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
-<body>
 	<div class="row">
 		<div class="col-4 w-25 p-5">
 			<label for="categorie" class="form-label">
@@ -128,7 +125,5 @@ for ($__section_cardBllet_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sect
 		});
 	<?php echo '</script'; ?>
 >
-</body>
-
-</html><?php }
+</body><?php }
 }

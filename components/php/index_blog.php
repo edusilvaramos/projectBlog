@@ -9,33 +9,29 @@ $categoryFilter = $_GET['categorie'] ?? null;
 $titleSearch = $_GET['title'] ?? null;
 // echo "titleSearch: $titleSearch<br>";
 
-if ($categoryFilter === null || $categoryFilter === "all") {
-    $db = returnCnx();
-    $req = $db->query('SELECT ID, titre, date_billet, categorie, contenu FROM billets_blog');
-    $postAll = $req->fetchAll(PDO::FETCH_ASSOC);
-    $categoryFilter === null;
-    // echo "<pre>";
-    // print_r($postAll);
-    // echo "</pre>";
+$db = returnCnx();
+$query = 'SELECT ID, titre, date_billet, categorie, contenu FROM billets_blog';
+$params = [];
 
-    if ($titleSearch !== null) {
-        $db = returnCnx();
-        $req = $db->query('SELECT ID, titre, date_billet, categorie, contenu FROM billets_blog where titre = "' . $titleSearch . '"');
-        $postAll = $req->fetchAll(PDO::FETCH_ASSOC);
-        // echo "<pre>";
-        // print_r($postAll);
-        // echo "</pre>";
-        }
-
-} else {
-    $db = returnCnx();
-    $req = $db->query('SELECT ID, titre, date_billet, categorie, contenu FROM billets_blog where categorie = "' . $categoryFilter . '"');
-    $postAll = $req->fetchAll(PDO::FETCH_ASSOC);
-    // echo "<pre>";
-    // print_r($postAll);
-    // echo "</pre>";
+// Filtrando por categoria, se necessário
+if ($categoryFilter !== null && $categoryFilter !== "all") {
+    $query .= ' WHERE categorie = :category';
+    $params[':category'] = $categoryFilter;
 }
 
+// Filtrando por título, se necessário
+if ($titleSearch !== null) {
+    $query .= (strpos($query, 'WHERE') !== false ? ' AND' : ' WHERE') . ' titre LIKE LOWER(:title)
+';
+    $params[':title'] = '%' . $titleSearch . '%';
+}
+
+// Preparando e executando a consulta
+$req = $db->prepare($query);
+$req->execute($params);
+
+// Obtendo os resultados
+$postAll = $req->fetchAll(PDO::FETCH_ASSOC);
 
 $coments = $db->query('SELECT * FROM commentaires_blog ');
 $comentsPost = $coments->fetchAll(PDO::FETCH_ASSOC);
@@ -61,8 +57,6 @@ $categoryPost = $category->fetchAll(PDO::FETCH_ASSOC);
 // echo "<pre>";
 // print_r($categoryPost);
 // echo "</pre>";
-
-
 $smarty->assign('categoryPost', $categoryPost);
 $smarty->assign('postAll', $postAll);
 $smarty->assign('commentCounts', $idCounts);

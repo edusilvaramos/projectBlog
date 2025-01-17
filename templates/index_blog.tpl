@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 	<title>MON Blog</title>
 </head>
+<body class="w-100">
 {include file="base_blog.tpl"}
-<body>
 	<div class="row">
 		<div class="col-4 w-25 p-5">
 			<label for="categorie" class="form-label">
@@ -77,5 +74,3 @@
 		});
 	</script>
 </body>
-
-</html>

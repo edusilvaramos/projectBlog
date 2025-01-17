@@ -1,30 +1,32 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-05 17:06:12
-  from 'file:afficher_blog.tpl' */
+/* Smarty version 5.4.3, created on 2025-01-16 19:22:19
+  from 'file:afficher_blog.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_677abc04a43c74_67438759',
+  'unifunc' => 'content_67894e5b817c13_60936642',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '42cf74d8269c4d210b292c54ef133c5fda82977d' => 
+    'b33d35b5ceb9970247a3378bf2e4363ac092b2da' => 
     array (
-      0 => 'afficher_blog.tpl',
-      1 => 1736096599,
+      0 => 'afficher_blog.html',
+      1 => 1737051151,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_677abc04a43c74_67438759 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
-?><html>
+function content_67894e5b817c13_60936642 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+?>
+
   <head>
-    <title>Blog</title>
+    <title>Task</title>
     <?php echo '<script'; ?>
  type="text/javascript">
       function afficherFormulaire() {
@@ -34,9 +36,8 @@ $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/tem
 >
   </head>
   <body>
-    <a href="index_blog.php">
-      <h1 class="title m-3"><strong>MON Blog</strong></h1>
-    </a>
+<?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?><html>
     <div class="container mt-5">
       <div class="card mx-auto" style="max-width: 600px">
         <div class="card-body">
@@ -51,7 +52,6 @@ $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/tem
 </p>
         </div>
       </div>
-      <!-- Section des commentaires -->
       <div class="card mx-auto mt-4" style="max-width: 600px">
         <div class="card-body">
           <h2>Commentaires</h2>
@@ -80,7 +80,6 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
 ?>
           </ul>
           <hr />
-          <!-- Lien pour afficher le formulaire -->
           <p>
             <a
               href="javascript:void(0);"
@@ -92,7 +91,6 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
         </div>
       </div>
 
-      <!-- Formulaire caché -->
       <div
         id="formComent"
         class="card mx-auto p-4 mt-4 shadow bg-light"
@@ -144,10 +142,10 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
       }
 
       document.querySelectorAll(".date-billet").forEach((element) => {
-        const originalDate = element.textContent.trim(); // Obtém o conteúdo do elemento
+        const originalDate = element.textContent.trim();
         if (originalDate) {
           const formattedDate = formatDate(originalDate);
-          element.textContent = formattedDate; // Atualiza o conteúdo do elemento
+          element.textContent = formattedDate;
         }
       });
     <?php echo '</script'; ?>

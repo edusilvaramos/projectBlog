@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-17 16:38:34
+/* Smarty version 5.4.3, created on 2025-01-17 18:04:42
   from 'file:afficher_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678a797a58fe81_91922593',
+  'unifunc' => 'content_678a8daab761e0_54745420',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '376491e93bf7149c289f5df36897edecbf7b7b23' => 
     array (
       0 => 'afficher_blog.tpl',
-      1 => 1737128312,
+      1 => 1737132283,
       2 => 'file',
     ),
   ),
@@ -21,45 +21,22 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678a797a58fe81_91922593 (\Smarty\Template $_smarty_tpl) {
+function content_678a8daab761e0_54745420 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
-?><head>
-  <title>Task</title>
-
-  <?php echo '<script'; ?>
- type="text/javascript">
-    function afficherFormulaire() {
-      document.getElementById("formComent").style.display = "block";
-    }
-  <?php echo '</script'; ?>
->
-</head>
-
-<body>
-
-
-  <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>  <?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?><html>
-  <h1 class="mb-2" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
-  <?php echo $_smarty_tpl->getValue('lastPost')['titre'];?>
+  <h1 class="mb-2"
+    style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
+    <?php echo $_smarty_tpl->getValue('lastPost')['titre'];?>
 
-</h1>
-  <div class="image-container">
-
-    <img src="<?php echo $_smarty_tpl->getValue('imageUrl');?>
-" alt="Descrição da Imagem" style=" position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111111; z-index: -1;
-  filter: brightness(0.3);">
-
-<div class="image-container">
+  </h1>
 
 
-  </div>
-  <div class=" container" style="margin-top: 10rem;">
+  <img src="<?php echo $_smarty_tpl->getValue('imageUrl');?>
+" alt="Descrição da Imagem" class="img-fluid d-none d-sm-block"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #111111; z-index: -1; filter: brightness(0.3);">
+
+  <div class="container">
     <div class="card mx-auto" style="max-width: 50rem;">
       <div class="card-body text-white bg-dark">
 
@@ -101,8 +78,8 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 </p>
       </div>
     </div>
-    <div class="card mx-auto mt-4"  style="font-family: 'Playfair Display', serif; max-width: 50rem">
-      <div class="card-body text-white bg-dark"  style="font-family: 'Playfair Display', serif;" >
+    <div class="card mx-auto mt-4" style="font-family: 'Playfair Display', serif; max-width: 50rem">
+      <div class="card-body text-white bg-dark" style="font-family: 'Playfair Display', serif;">
         <h2>Commentaires</h2>
         <hr />
 
@@ -134,7 +111,8 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
       </div>
     </div>
 
-    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
+    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light"
+      style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
       <form method="POST" action="../php/commenter_blog.php">
         <input type="hidden" name="ID" value="<?php echo $_smarty_tpl->getValue('lastPost')['ID'];?>
 " />
@@ -173,7 +151,11 @@ for ($__section_comment_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_sectio
         const formattedDate = formatDate(originalDate);
         element.textContent = formattedDate;
       }
-    });
+    })
+
+    function afficherFormulaire() {
+      document.getElementById("formComent").style.display = "block";
+    }
   <?php echo '</script'; ?>
 >
 </body><?php }

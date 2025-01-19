@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="../style/bootstrap.min.css">
+<link rel="stylesheet" href="./components/style/bootstrap.min.css">
 <?php
 
-require_once("../../config_blog.php");
+require_once("config_blog.php");
 
 
 $categoryFilter = $_GET['categorie'] ?? null;
@@ -12,25 +12,22 @@ $titleSearch = $_GET['title'] ?? null;
 $db = returnCnx();
 $query = 'SELECT ID, titre, date_billet, categorie, contenu FROM billets_blog';
 $params = [];
-
-// Filtrando por categoria, se necessário
 if ($categoryFilter !== null && $categoryFilter !== "all") {
     $query .= ' WHERE categorie = :category';
     $params[':category'] = $categoryFilter;
 }
 
-// Filtrando por título, se necessário
 if ($titleSearch !== null) {
     $query .= (strpos($query, 'WHERE') !== false ? ' AND' : ' WHERE') . ' titre LIKE LOWER(:title)
 ';
     $params[':title'] = '%' . $titleSearch . '%';
 }
 
-// Preparando e executando a consulta
+
 $req = $db->prepare($query);
 $req->execute($params);
 
-// Obtendo os resultados
+
 $postAll = $req->fetchAll(PDO::FETCH_ASSOC);
 
 $coments = $db->query('SELECT * FROM commentaires_blog ');
@@ -57,6 +54,15 @@ $categoryPost = $category->fetchAll(PDO::FETCH_ASSOC);
 // echo "<pre>";
 // print_r($categoryPost);
 // echo "</pre>";
+
+$roots = [
+    'path' => '/classPHP/class/projectBlog/components/php/',
+    'home' => '/classPHP/class/projectBlog/',
+];
+
+$smarty->assign('current_page', 'home');
+$smarty->assign('titre', 'Mon Blog');
+$smarty->assign('roots', $roots);
 $smarty->assign('categoryPost', $categoryPost);
 $smarty->assign('postAll', $postAll);
 $smarty->assign('commentCounts', $idCounts);

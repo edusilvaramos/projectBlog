@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-17 16:34:50
+/* Smarty version 5.4.3, created on 2025-01-17 17:27:06
   from 'file:edition_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678a789ac9cd97_06343222',
+  'unifunc' => 'content_678a84da7d08d6_24859850',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69cb8c1b03561472b87ccb46688ac6664f0182e4' => 
     array (
       0 => 'edition_blog.tpl',
-      1 => 1737128089,
+      1 => 1737131223,
       2 => 'file',
     ),
   ),
@@ -21,29 +21,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678a789ac9cd97_06343222 (\Smarty\Template $_smarty_tpl) {
+function content_678a84da7d08d6_24859850 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
-?><html>
-<head>
-  <title><?php echo $_smarty_tpl->getValue('titre');?>
-</title>
-  <style>
-    h1 {
-      font-family: sans-serif;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-  </style>
-</head>
-
-<body style="font-family: 'Playfair Display', serif;" >
-<?php $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+$_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
@@ -100,6 +80,7 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
 
   
 </body>
+</html>
 
-</html><?php }
+<?php }
 }

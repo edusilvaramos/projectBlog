@@ -40,10 +40,8 @@ $imagesPost = $images->fetchAll(PDO::FETCH_ASSOC);
 
 // --------------------------------------- imagens API --------------------------------
 
-
 $apiKey = 'qdvkSFyvjpHK9nzYjLHP3GDYRzscJDB8uOjodvd_NH0'; // Substitua com sua chave do Unsplash
 
-// Tema desejado
 $categorie = $lastPost['categorie'];
 $categorys = [
     "technologie" => "Technology",
@@ -74,46 +72,38 @@ foreach ($categorys as $key => $value) {
     }
 }
 
-
-
-// URL da API para buscar imagens no tema
 $url = "https://api.unsplash.com/photos/random?query={$tema}&client_id={$apiKey}&count=1";
 
-// Usando cURL para fazer a requisição
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($ch);
 curl_close($ch);
 
-// Verifique se houve erro na requisição
 if ($response === false) {
     die('Erro ao conectar com a API do Unsplash');
 }
 
-// Decodificar a resposta JSON
+
 $data = json_decode($response, true);
 
-// Verifique se a resposta contém imagens
 if (isset($data[0])) {
-    // Obter o link da imagem
-    $imageUrl = $data[0]['urls']['regular'];
-
-    // Atribuir a URL da imagem ao template Smarty
+    $imageUrl = $data[0]['urls']['full'];
     $smarty->assign('imageUrl', $imageUrl);
-
-    // Exibir o template
-
 } else {
-    // Caso não haja imagem, você pode definir uma imagem padrão ou mostrar uma mensagem de erro
-    $smarty->assign('imageUrl', 'url_da_imagem_padrao');
+    $smarty->assign('imageUrl', '../image/logo.png');
 }
-
 // echo "<pre>";
 // print_r($imageUrl);
 // echo "</pre>";
+$roots = [
+    'path' => '/classPHP/class/projectBlog/components/php/',
+    'home' => '/classPHP/class/projectBlog/'
+];
 
-
+$smarty->assign('roots', $roots);
+$smarty->assign('titre', 'ticket');
 $smarty->assign('lastPost', $lastPost);
 $smarty->assign('comentsPost', $comentsPost);
 $smarty->assign('imagesPost', $imagesPost);

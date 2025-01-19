@@ -1,35 +1,14 @@
-<head>
-  <title>Task</title>
-
-  <script type="text/javascript">
-    function afficherFormulaire() {
-      document.getElementById("formComent").style.display = "block";
-    }
-  </script>
-</head>
-
-<body>
-
-
   {include file="base_blog.tpl"}<html>
-  <h1 class="mb-2" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
-  {$lastPost.titre}
-</h1>
-  <div class="image-container">
-
-    <img src="{$imageUrl}" alt="Descrição da Imagem" style=" position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111111; z-index: -1;
-  filter: brightness(0.3);">
-
-<div class="image-container">
+  <h1 class="mb-2"
+    style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: bold; color: #bababa; text-align: center; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; margin-bottom: 4rem; margin-top: 3rem;">
+    {$lastPost.titre}
+  </h1>
 
 
-  </div>
-  <div class=" container" style="margin-top: 10rem;">
+  <img src="{$imageUrl}" alt="Descrição da Imagem" class="img-fluid d-none d-sm-block"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #111111; z-index: -1; filter: brightness(0.3);">
+
+  <div class="container">
     <div class="card mx-auto" style="max-width: 50rem;">
       <div class="card-body text-white bg-dark">
 
@@ -66,8 +45,8 @@
         <p class="lead">{$lastPost.contenu}</p>
       </div>
     </div>
-    <div class="card mx-auto mt-4"  style="font-family: 'Playfair Display', serif; max-width: 50rem">
-      <div class="card-body text-white bg-dark"  style="font-family: 'Playfair Display', serif;" >
+    <div class="card mx-auto mt-4" style="font-family: 'Playfair Display', serif; max-width: 50rem">
+      <div class="card-body text-white bg-dark" style="font-family: 'Playfair Display', serif;">
         <h2>Commentaires</h2>
         <hr />
 
@@ -87,7 +66,8 @@
       </div>
     </div>
 
-    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light" style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
+    <div id="formComent" class="card mx-auto p-4 mt-4 shadow bg-light"
+      style="display: none; max-width: 600px; font-family: 'Playfair Display', serif;">
       <form method="POST" action="../php/commenter_blog.php">
         <input type="hidden" name="ID" value="{$lastPost.ID}" />
         <div class="mb-3">
@@ -124,6 +104,10 @@
         const formattedDate = formatDate(originalDate);
         element.textContent = formattedDate;
       }
-    });
+    })
+
+    function afficherFormulaire() {
+      document.getElementById("formComent").style.display = "block";
+    }
   </script>
 </body>

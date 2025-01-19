@@ -1,22 +1,4 @@
-<html>
-<head>
-  <title>{$titre}</title>
-  <style>
-    h1 {
-      font-family: sans-serif;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
 
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-  </style>
-</head>
-
-<body style="font-family: 'Playfair Display', serif;" >
 {include file="base_blog.tpl"}
   <div class="d-flex justify-content-center mt-5 vh-100">
     <div class="container">
@@ -73,5 +55,5 @@
 
   
 </body>
-
 </html>
+

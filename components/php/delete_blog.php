@@ -11,6 +11,9 @@ if ($id !== null) {
 
     $coments = $db->prepare('DELETE FROM commentaires_blog WHERE ID = ?');
     $coments->execute([$id]);
+
+    $coments = $db->prepare('DELETE FROM images_blog WHERE 	billet_id = ?');
+    $coments->execute([$id]);
 }
 header("Location: ../../index_blog.php");
 exit;

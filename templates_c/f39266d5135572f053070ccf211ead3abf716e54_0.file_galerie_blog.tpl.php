@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-20 13:25:36
+/* Smarty version 5.4.3, created on 2025-01-20 15:59:55
   from 'file:galerie_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678e4ed097d031_45440782',
+  'unifunc' => 'content_678e72fb949e95_91410409',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f39266d5135572f053070ccf211ead3abf716e54' => 
     array (
       0 => 'galerie_blog.tpl',
-      1 => 1737379534,
+      1 => 1737388791,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:base_blog.tpl' => 1,
   ),
 ))) {
-function content_678e4ed097d031_45440782 (\Smarty\Template $_smarty_tpl) {
+function content_678e72fb949e95_91410409 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
 $_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
@@ -88,14 +88,15 @@ for ($__section_image_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 echo $_smarty_tpl->getValue('imagePost')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['image_path'];?>
 "
                     onclick="window.location.href='<?php echo $_smarty_tpl->getValue('roots')['path'];?>
-afficher_blog.php?id=<?php echo $_smarty_tpl->getValue('postAll')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['ID'];?>
+afficher_blog.php?id=<?php echo $_smarty_tpl->getValue('imagePost')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['billet_id'];?>
 ';" /><img
                     src="<?php echo $_smarty_tpl->getValue('roots')['photoPath'];
 echo $_smarty_tpl->getValue('imagePost')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['image_path'];?>
 "
                     onclick="window.location.href='<?php echo $_smarty_tpl->getValue('roots')['path'];?>
-afficher_blog.php?id=<?php echo $_smarty_tpl->getValue('postAll')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['ID'];?>
+afficher_blog.php?id=<?php echo $_smarty_tpl->getValue('imagePost')[($_smarty_tpl->getValue('__smarty_section_image')['index'] ?? null)]['billet_id'];?>
 ';" />
+                    
             </div>
         <?php
 }
@@ -104,7 +105,6 @@ afficher_blog.php?id=<?php echo $_smarty_tpl->getValue('postAll')[($_smarty_tpl-
     </div>
 </div>
 </body>
-</html>
 
-<?php }
+</html><?php }
 }

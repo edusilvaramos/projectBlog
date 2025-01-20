@@ -15,12 +15,9 @@ $image = $db->query('SELECT * FROM images_blog');
 $image->execute();
 $imagePost = $image->fetchAll(PDO::FETCH_ASSOC);
 
-
 // echo "<pre>";
 // print_r($imagePost);
 // echo "</pre>";
-
-
 
 $technologie = '../image/Screenshot.png';
 

@@ -53,13 +53,14 @@
         {section name=image loop=$imagePost}
             <div class="image" style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);">
                 <img src="{$roots.photoPath}{$imagePost[image].image_path}"
-                    onclick="window.location.href='{$roots.path}afficher_blog.php?id={$postAll[image].ID}';" /><img
+                    onclick="window.location.href='{$roots.path}afficher_blog.php?id={$imagePost[image].billet_id}';" /><img
                     src="{$roots.photoPath}{$imagePost[image].image_path}"
-                    onclick="window.location.href='{$roots.path}afficher_blog.php?id={$postAll[image].ID}';" />
+                    onclick="window.location.href='{$roots.path}afficher_blog.php?id={$imagePost[image].billet_id}';" />
+                    
             </div>
         {/section}
     </div>
 </div>
 </body>
-</html>
 
+</html>

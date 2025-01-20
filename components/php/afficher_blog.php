@@ -40,7 +40,7 @@ $imagesPost = $images->fetchAll(PDO::FETCH_ASSOC);
 
 // --------------------------------------- imagens API --------------------------------
 
-$apiKey = 'qdvkSFyvjpHK9nzYjLHP3GDYRzscJDB8uOjodvd_NH0'; // Substitua com sua chave do Unsplash
+$apiKey = 'key'; // Substitua com sua chave do Unsplash
 
 $categorie = $lastPost['categorie'];
 $categorys = [

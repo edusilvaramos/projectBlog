@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-19 20:18:26
+/* Smarty version 5.4.3, created on 2025-01-20 10:47:59
   from 'file:base_blog.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_678d500209b0d5_88988650',
+  'unifunc' => 'content_678e29dfe288c4_21350890',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '89e8447d6fbea90d616b5b57a96762c8bf48d906' => 
+    'a7721a95e4e4f22404874f56bfd08a710fe30b99' => 
     array (
       0 => 'base_blog.tpl',
-      1 => 1737314265,
+      1 => 1737370069,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_678d500209b0d5_88988650 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/templates';
+function content_678e29dfe288c4_21350890 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +37,6 @@ $_smarty_current_dir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/pro
   <title><?php echo $_smarty_tpl->getValue('titre');?>
 </title>
 </head>
-
 <body class="w-100">
   <nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light"
     style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">
@@ -70,7 +69,8 @@ galerie_blog.php">Galerie de photos</a>
           </li>
         </ul>
         <?php if ($_smarty_tpl->getValue('current_page') == 'home') {?>
-          <form class="d-flex " action="../index_blog.php" method="get">
+          <form class="d-flex " action="<?php echo $_smarty_tpl->getValue('roots')['home'];?>
+index_blog.php" method="get">
               <input class="form-control me-sm-2" type="search" placeholder="Chercher pur titre" name="title">
               <button class="btn btn-secondary my-2 my-sm-0" type="submit">Chercher</button>
           </form>

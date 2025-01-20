@@ -1,4 +1,30 @@
-{include file="base_blog.tpl"}
+<?php
+/* Smarty version 5.4.3, created on 2025-01-20 09:34:38
+  from 'file:edition_blog.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.4.3',
+  'unifunc' => 'content_678e18ae44a6c4_79644650',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'ef85ec17efa6a08456af687419ea5f663f045eb8' => 
+    array (
+      0 => 'edition_blog.tpl',
+      1 => 1737365638,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:base_blog.tpl' => 1,
+  ),
+))) {
+function content_678e18ae44a6c4_79644650 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/templates';
+$_smarty_tpl->renderSubTemplate("file:base_blog.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
 <div class="d-flex justify-content-center mt-5 vh-100">
   <div class="container">
     <h1 class="text-center"
@@ -58,4 +84,5 @@
 
 </body>
 
-</html>
+</html><?php }
+}

@@ -24,7 +24,7 @@ try {
 
 
     // ------------ Upload de la photo ------------
-    $imageDir = '/Applications/XAMPP/xamppfiles/htdocs/classPHP/class/projectBlog/components/image/';
+    $imageDir = '/Applications/MAMP/htdocs/classPHP/class/projectBlog/components/image/';
     // Verifica se o arquivo foi enviado
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $tmpFile = $_FILES['image']['tmp_name'];

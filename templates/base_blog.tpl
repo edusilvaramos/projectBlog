@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../style/bootstrap.min.css">
   <title>{$titre}</title>
 </head>
-
 <body class="w-100">
   <nav class="navbar navbar-expand-lg bg-light w-100" data-bs-theme="light"
     style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">
@@ -39,7 +38,7 @@
           </li>
         </ul>
         {if $current_page == 'home'}
-          <form class="d-flex " action="../index_blog.php" method="get">
+          <form class="d-flex " action="{$roots.home}index_blog.php" method="get">
               <input class="form-control me-sm-2" type="search" placeholder="Chercher pur titre" name="title">
               <button class="btn btn-secondary my-2 my-sm-0" type="submit">Chercher</button>
           </form>
